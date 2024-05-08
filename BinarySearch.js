@@ -1,22 +1,24 @@
-function BinarySearch(array , searchvalue) 
+function BinarySearch(array , searchvalue ) 
 {
-    let middleindex = Math.floor(array.length / 2);
-    
-    if (array.length === 0) {
-        return -1; // Value not found
-    }
+    let start = 0 , end = array.length - 1;    
+    while (start <= end) 
+    {
+        let middleindex = Math.floor( (start + end) / 2 ) ;
 
-    if(array[middleindex] == searchvalue)
+        if( array[middleindex] == searchvalue )
+            {
+                return middleindex;
+            }
+        else if (array[middleindex] > searchvalue)
         {
-            return middleindex;
+            end = middleindex -1 ;
         }
-    else if (array[middleindex] > searchvalue)
+        else 
         {
-         return BinarySearch(array.slice(0,middleindex) , searchvalue);
+            start = middleindex + 1; 
         }
-    else 
-        {
-         return BinarySearch(array.slice(middleindex) , searchvalue);
-        }
+
+    }
+    return -1;
 }
-console.log( BinarySearch( [1,2,3,4,5,6,7,8,9,10] , 5 ) );
+console.log(BinarySearch( [1,2,3,5,6,22,52] , 81 ));
