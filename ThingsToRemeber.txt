@@ -1,0 +1,19 @@
+recursion :
+    handle base case 
+    assume n-1 works
+    show n-1 works for n
+
+BinarySearch :
+    needs sorted array
+    divides in half every time
+     
+Bubble Sort :
+    larger values get sorted first 
+    in loop until there is swap
+    index value  = bubble
+    if index value > index+1 value then bubble stays same
+    else bubble changes to index+1 value
+
+CartesianProduct :
+    big o(n*m)
+    nXm != mXn

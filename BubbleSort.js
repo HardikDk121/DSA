@@ -3,7 +3,7 @@ function BubbleSort(array)
 
        let swap, unsortedpart = array.length;
         do{
-             swap=false;
+            swap=false;
             for (let index = 0; index < unsortedpart - 1 ; index++) {
                 if ( array[index] > array[ index + 1 ] ) 
                 {
